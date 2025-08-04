@@ -1,0 +1,41 @@
+Task 1: Port Scanning Using Nmap
+
+Tools Used:
+- Nmap (GUI: Zenmap)
+- Windows 10
+
+Procedure:
+
+1. Install Nmap
+   Download from the official website: https://nmap.org/download.html
+   Install the GUI version: Zenmap
+
+2. Identify Your IP Range
+   Open Command Prompt and run:
+   ipconfig
+   Look for your IPv4 address (e.g., 192.168.56.1).
+   The subnet used: 192.168.56.0/24
+
+3. Launch Zenmap (Nmap GUI)
+   Target: 192.168.56.1
+   Profile: Intense scan, all TCP ports
+   Command used:
+   nmap -sS -T4 -A -v 192.168.56.1 -oN scan_results.txt
+
+4. Review Results
+   Open ports discovered:
+   - 135/tcp – msrpc
+   - 139/tcp – netbios-ssn
+   - 445/tcp – microsoft-ds
+
+5. Save Output
+   Screenshot of results saved as: nmap_scan_result.png
+   Text output saved as: scan_results.txt
+
+6. Optional: Use Wireshark to analyze packets during the scan.
+
+Files to Include in GitHub:
+- procedure.txt
+- nmap_scan_result.png
+- README.txt
+- scan_results.txt
